@@ -17,14 +17,26 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        // Get all TextViews
+        TextView colours = (TextView) findViewById(R.id.colours);
+        TextView family = (TextView) findViewById(R.id.family);
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+        TextView phrases = (TextView) findViewById(R.id.phrases);
+
+        // Set OnClickListeners
+        colours.setOnClickListener(new CategoryClickListener(this, ColoursActivity.class));
+        family.setOnClickListener(new CategoryClickListener(this, FamilyActivity.class));
+        numbers.setOnClickListener(new CategoryClickListener(this, NumbersActivity.class));
+        phrases.setOnClickListener(new CategoryClickListener(this, PhrasesActivity.class));
     }
 }

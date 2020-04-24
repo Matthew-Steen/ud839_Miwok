@@ -35,7 +35,7 @@
         android:text="@string/category_family" />
 
     <TextView
-        android:id="@+id/colors"
+        android:id="@+id/colours"
         style="@style/CategoryStyle"
         android:background="@color/category_colors"
         android:text="@string/category_colors" />
